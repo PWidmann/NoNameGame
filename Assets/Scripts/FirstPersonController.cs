@@ -6,10 +6,10 @@ public class FirstPersonController : MonoBehaviour
 {
     [SerializeField] Transform playerCamera;
 
+    [SerializeField] bool lockCursor = true;
     [SerializeField] float mouseSensitivity = 2f;
     [SerializeField] float walkSpeed = 6;
     [SerializeField] float jumpHeight = 1f;
-    [SerializeField] bool lockCursor = true;
     [SerializeField] float gravity = -13.0f;
     [SerializeField] [Range(0.0f, 0.5f)] float moveSmoothTime = 0.3f;
     [SerializeField] [Range(0.0f, 0.5f)] float mouseSmoothTime = 0.03f;
@@ -21,7 +21,7 @@ public class FirstPersonController : MonoBehaviour
 
     public bool isGrounded = false;
 
-    public float groundDistance = 0.4f;
+    public float groundDistance = 0.1f;
     public LayerMask groundMask;
 
     CharacterController controller;
